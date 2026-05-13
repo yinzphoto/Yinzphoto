@@ -5,64 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yinzphoto | Professional Photography Pittsburgh</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        /* Custom font */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
         body { font-family: 'Inter', sans-serif; }
         
         .split-side {
             transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-            filter: grayscale(40%);
         }
-        .split-side:hover {
-            filter: grayscale(0%);
-            flex-grow: 1.2;
+        @media (min-width: 768px) {
+            .split-side:hover { flex-grow: 1.2; }
         }
     </style>
 </head>
-<body class="bg-slate-900 overflow-hidden">
+<body class="bg-slate-900 flex flex-col h-screen overflow-hidden">
 
-    <div class="absolute top-10 left-0 right-0 z-50 text-center pointer-events-none">
-        <h1 class="text-white text-4xl md:text-5xl font-black tracking-tighter drop-shadow-2xl">
-            <span style="color: #FFB612;">YINZ</span> PHOTO
+    <div class="absolute top-6 md:top-10 left-0 right-0 z-50 text-center pointer-events-none">
+        <h1 class="text-white text-3xl md:text-5xl font-black tracking-tighter drop-shadow-2xl">
+            <span style="color: #FFB612;">YINZ</span>PHOTO
         </h1>
-        <p class="text-slate-300 tracking-widest text-xs mt-2 uppercase font-bold">Pittsburgh, PA</p>
+        <p class="text-slate-300 tracking-widest text-[10px] md:text-xs mt-1 uppercase font-bold">Pittsburgh, PA</p>
     </div>
 
-    <main class="flex flex-col md:flex-row h-screen w-full">
+    <main class="flex flex-col md:flex-row flex-grow w-full">
         
         <a href="portraits.html" class="split-side relative flex-1 group overflow-hidden border-b md:border-b-0 md:border-r border-slate-800">
-            <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-center transition-transform duration-[...]
-            <div class="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/20 transition-colors"></div>
+            <div class="absolute inset-0 bg-[url('portrait-hero.jpg')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105"></div>
+            <div class="absolute inset-0 bg-slate-900/50 md:bg-slate-900/40 group-hover:bg-slate-900/20 transition-colors"></div>
             
-            <div class="relative h-full flex flex-col items-center justify-center text-center p-6 mt-12 md:mt-0">
-                <h2 class="text-white text-3xl md:text-5xl font-bold mb-4 transform translate-y-4 group-hover:translate-y-0 transition-transform">Portraits</h2>
-                <div class="h-1 w-12 mb-6 transition-all group-hover:w-24" style="background-color: #FFB612;"></div>
-                <p class="text-slate-200 opacity-0 group-hover:opacity-100 transition-opacity duration-500 max-w-xs font-medium">
-                    Corporate Headshots & Modern Portraits. <br>Professional, confident, and character-driven.
+            <div class="relative h-full flex flex-col items-center justify-center text-center p-6 pt-20 md:pt-0">
+                <h2 class="text-white text-2xl md:text-5xl font-bold mb-2">Portraits</h2>
+                <div class="h-1 w-10 bg-[#FFB612] mb-4"></div>
+                <p class="text-slate-200 text-sm md:text-base md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 max-w-xs font-medium">
+                    Corporate Headshots & Character Portraits.
                 </p>
             </div>
         </a>
 
         <a href="real-estate.html" class="split-side relative flex-1 group overflow-hidden">
-            <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1600607687940-47a04b62d330?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-center transition-transform duration-[...]
-            <div class="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/20 transition-colors"></div>
+            <div class="absolute inset-0 bg-[url('re-hero.jpg')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105"></div>
+            <div class="absolute inset-0 bg-slate-900/50 md:bg-slate-900/40 group-hover:bg-slate-900/20 transition-colors"></div>
             
-            <div class="relative h-full flex flex-col items-center justify-center text-center p-6 mt-12 md:mt-0">
-                <h2 class="text-white text-3xl md:text-5xl font-bold mb-4 transform translate-y-4 group-hover:translate-y-0 transition-transform">Real Estate</h2>
-                <div class="h-1 w-12 mb-6 transition-all group-hover:w-24" style="background-color: #FFB612;"></div>
-                <p class="text-slate-200 opacity-0 group-hover:opacity-100 transition-opacity duration-500 max-w-xs font-medium">
-                    High-End Property Media. <br>MLS-ready photography for the modern listing.
+            <div class="relative h-full flex flex-col items-center justify-center text-center p-6 pb-20 md:pb-0">
+                <h2 class="text-white text-2xl md:text-5xl font-bold mb-2">Real Estate</h2>
+                <div class="h-1 w-10 bg-[#FFB612] mb-4"></div>
+                <p class="text-slate-200 text-sm md:text-base md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 max-w-xs font-medium">
+                    High-End Property Media. MLS-Ready.
                 </p>
             </div>
         </a>
 
     </main>
 
-    <footer class="absolute bottom-6 left-0 right-0 z-50 text-center pointer-events-none">
-        <p class="text-slate-400 text-[10px] uppercase tracking-widest font-bold">
-            Established 2026 &nbsp;|&nbsp; Professional Media Solutions
+    <footer class="bg-slate-900 md:absolute md:bottom-6 left-0 right-0 z-50 text-center py-4 md:py-0">
+        <p class="text-slate-400 text-[9px] uppercase tracking-widest font-bold">
+            ESTABLISHED 2026 &nbsp;|&nbsp; PROFESSIONAL MEDIA SOLUTIONS
         </p>
     </footer>
 
